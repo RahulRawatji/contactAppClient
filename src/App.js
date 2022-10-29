@@ -1,4 +1,4 @@
-import { Switch, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './css/Main.scss';
 
 import Navbar from './components/Navbar';

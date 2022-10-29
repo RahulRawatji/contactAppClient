@@ -23,7 +23,7 @@ const Modal = ({ closeModal, data }) => {
   },[])
 
   const submitfromData = async (payload) => {
-    const response = await callApi("/sendOtp", payload, "POST");
+    await callApi("/sendOtp", payload, "POST");
     //:TODO Redirect and show some responses'w
     navigate('/');
   }
@@ -33,6 +33,9 @@ const Modal = ({ closeModal, data }) => {
     const formData = new FormData(e.target);
     console.log(Object.fromEntries(formData.entries()));
     const { phoneNumber } = Object.fromEntries(formData.entries());
+    if (phoneNumber.length > 13) {
+      return; 
+    }
     const payload = {
       contactNumber: phoneNumber,
       contactName: firstName,

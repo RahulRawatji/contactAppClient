@@ -40,7 +40,7 @@ const ViewMessages = () => {
         <Body>
         {allMessages?.map(message => {
           return (<div className='bg-light mx-3 my-3 rounded p-2'>
-            <h5>{startCase(message.message)}</h5>
+            <h6 className=''>{startCase(message.message)}</h6>
             <p>{startCase(message.contactName)}</p>
           </div>
           )

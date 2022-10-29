@@ -17,7 +17,7 @@ function Details(props) {
 
   useEffect(() => {
     getIdData();
-  }, [])
+  }, []);
 
 
   return (
